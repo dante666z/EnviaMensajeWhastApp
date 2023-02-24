@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sh="http://sharpnado.com"
+             x:Class="EnviaMensajeWhastApp.MainPage">
+
+    <Grid>
+        <Image Source="https://img.freepik.com/vector-gratis/fondo-degradado-tonos-verdes_23-2148373476.jpg"
+               Aspect="AspectFill"/>
+        <StackLayout Padding="20">
+
+            <sh:Shadows x:Name="MyViewShadows"
+                    CornerRadius="30"
+                    Shades="{sh:SingleShade Offset='0, 10',
+                                    Opacity=0.5,
+                                    Color=#FD8298}"
+                    VerticalOptions="CenterAndExpand">
+                <Frame 
+                   CornerRadius="18"
+                   HasShadow="False">
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Padding="0"
+                               HeightRequest="80"
+                               WidthRequest="80"
+                               VerticalOptions="Center"
+                               CornerRadius="40">
+                                <Image Source="https://pbs.twimg.com/profile_images/3032363142/a16a150bf6def6614d6b38096fd03330_400x400.jpeg"
+                                   Aspect="AspectFill" />
+                            </Frame>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Scarlet johanson"
+                                   FontSize="Body"/>
+                                    <Label Text="+529512267176"
+                                   FontSize="Small"
+                                   FontAttributes="Bold"/>
+                                </StackLayout>
+
+                                <Entry Placeholder="Escriba su mensaje"
+                                   HorizontalOptions="FillAndExpand"
+                                   x:Name="txtmensaje"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <Button Text="Enviar"
+                            HorizontalOptions="End"
+                            TextTransform="None"
+                            CornerRadius="18"
+                            BackgroundColor="#00F26D"
+                            Clicked="Button_Clicked"/>
+                    </StackLayout>
+                </Frame>
+            </sh:Shadows>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
